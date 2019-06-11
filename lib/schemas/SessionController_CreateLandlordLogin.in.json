@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "shortName": {
+            "required": true,
+            "type": "string"
+        },
+        "email": {
+            "required": true,
+            "type": "string"
+        },
+        "title": {
+            "required": true,
+            "type": "string"
+        },
+        "forename": {
+            "required": true,
+            "type": "string"
+        },
+        "surname": {
+            "required": true,
+            "type": "string"
+        },
+        "propertyAdresss": {
+            "required": true,
+            "type": "string"
+        },
+        "contactDetails": {
+            "required": true,
+            "type": "string"
+        },
+        "branchID": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

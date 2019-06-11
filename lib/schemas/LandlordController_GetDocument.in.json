@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "shortName": {
+            "required": true,
+            "type": "string"
+        },
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "ID": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

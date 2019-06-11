@@ -1,0 +1,368 @@
+{
+    "title": "LetMC Api V2, Customer Login",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/letmc.com/customer/v2-customer/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://live-api.letmc.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "auth_apiKey": {
+                "label": "ApiKey (apiKey)",
+                "viewClass": "TextFieldView",
+                "note": "ApiKey Authentication"
+            },
+            "auth_username": {
+                "label": "Username (basic)",
+                "viewClass": "TextFieldView",
+                "note": "Basic HTTP Authentication"
+            },
+            "auth_password": {
+                "label": "Password (basic)",
+                "viewClass": "TextFieldView",
+                "note": "Basic HTTP Authentication"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "LandlordController_GetAccounts": {
+            "main": "./lib/actions/LandlordController_GetAccounts.js",
+            "title": "Get the accounting details for the landlord.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LandlordController_GetAccounts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LandlordController_GetDocument": {
+            "main": "./lib/actions/LandlordController_GetDocument.js",
+            "title": "Download a Document",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LandlordController_GetDocument.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LandlordController_GetInvetoryReport": {
+            "main": "./lib/actions/LandlordController_GetInvetoryReport.js",
+            "title": "Generate a Inventory PDF for a tenancy",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LandlordController_GetInvetoryReport.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LandlordController_GetInvoice": {
+            "main": "./lib/actions/LandlordController_GetInvoice.js",
+            "title": "Get an invoice pdf belonging to the landlord.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LandlordController_GetInvoice.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LandlordController_GetMaintenanceJobs": {
+            "main": "./lib/actions/LandlordController_GetMaintenanceJobs.js",
+            "title": "Get Active maintenance jobs.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LandlordController_GetMaintenanceJobs.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LandlordController_GetProfitLossReport": {
+            "main": "./lib/actions/LandlordController_GetProfitLossReport.js",
+            "title": "Generate a Profit and Loss Report",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LandlordController_GetProfitLossReport.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LandlordController_GetRentArrears": {
+            "main": "./lib/actions/LandlordController_GetRentArrears.js",
+            "title": "Rent Arrears",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LandlordController_GetRentArrears.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LandlordController_GetSASReport": {
+            "main": "./lib/actions/LandlordController_GetSASReport.js",
+            "title": "Generate a Self Assessment Tax Report",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LandlordController_GetSASReport.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LandlordController_GetSettings": {
+            "main": "./lib/actions/LandlordController_GetSettings.js",
+            "title": "Get contact details of all linked landlords.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LandlordController_GetSettings.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LandlordController_GetSummaryDetails": {
+            "main": "./lib/actions/LandlordController_GetSummaryDetails.js",
+            "title": "Get the summary details for the landlord.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LandlordController_GetSummaryDetails.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LandlordController_GetTenancy": {
+            "main": "./lib/actions/LandlordController_GetTenancy.js",
+            "title": "Get tenancy details.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LandlordController_GetTenancy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "LandlordController_GetTenancyAgreementReport": {
+            "main": "./lib/actions/LandlordController_GetTenancyAgreementReport.js",
+            "title": "Generate a Tenancy Agreement Copy (PDF)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/LandlordController_GetTenancyAgreementReport.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PhotoController_GetPhotoDownload": {
+            "main": "./lib/actions/PhotoController_GetPhotoDownload.js",
+            "title": "Downloads the photo of a property given the photo ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PhotoController_GetPhotoDownload.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PropertyController_GetPropertiesPhotos": {
+            "main": "./lib/actions/PropertyController_GetPropertiesPhotos.js",
+            "title": "A collection showing all the photos linked to a specific block, property or room",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PropertyController_GetPropertiesPhotos.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SessionController_Logout": {
+            "main": "./lib/actions/SessionController_Logout.js",
+            "title": "Logout a customer previously logged in via the Login endpoint.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SessionController_Logout.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SessionController_GetSessionInfo": {
+            "main": "./lib/actions/SessionController_GetSessionInfo.js",
+            "title": "Gets information about the currently logged on customer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SessionController_GetSessionInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SessionController_Login": {
+            "main": "./lib/actions/SessionController_Login.js",
+            "title": "Login as a customer given their username and password.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SessionController_Login.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SessionController_CreateLandlordLogin": {
+            "main": "./lib/actions/SessionController_CreateLandlordLogin.js",
+            "title": "Send a request to the in-tray to create a landlord login.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SessionController_CreateLandlordLogin.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SessionController_ChangePassword": {
+            "main": "./lib/actions/SessionController_ChangePassword.js",
+            "title": "Change the password of a customer given their existing and new password.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SessionController_ChangePassword.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SessionController_ResetPassword": {
+            "main": "./lib/actions/SessionController_ResetPassword.js",
+            "title": "Reset the customer's password. An email will be sent out to reset.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SessionController_ResetPassword.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

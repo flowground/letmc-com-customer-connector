@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "shortName": {
+            "required": true,
+            "type": "string"
+        },
+        "username": {
+            "required": true,
+            "type": "string"
+        },
+        "password": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

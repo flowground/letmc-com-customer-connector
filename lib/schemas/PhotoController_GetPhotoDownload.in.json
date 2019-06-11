@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "shortName": {
+            "required": true,
+            "type": "string"
+        },
+        "token": {
+            "required": true,
+            "type": "string"
+        },
+        "photoID": {
+            "required": true,
+            "type": "string"
+        },
+        "width": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "height": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}
